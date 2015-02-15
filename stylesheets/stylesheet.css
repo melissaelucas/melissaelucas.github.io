@@ -431,7 +431,7 @@ body {
   font-size: 15px;
   font-family: Arial, Arial, Helvetica, sans-serif;
   line-height: 1.5;
-  background: #D1D1D1;
+  background: #D1D1D1 url(../images/kraft.jpeg);
 }
 
 a {
@@ -453,6 +453,7 @@ h1.title {
   font-style: italic;
   font-family:Georgia, serif;
   text-align: center;
+  color: maroon;
 }
 
 .wrapper {
@@ -474,7 +475,7 @@ p.tagline {
 
 #main {
   margin-top: 20px;
-  padding: 0 20px 90px;
+  padding: 0 20px;
   background-color: #fff;
 }
 
@@ -964,3 +965,14 @@ footer .owner p a {
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+.tira {
+  background-color: #445588;
+  text-align: center;
+}
+.mel {
+  color: #ffebcd;
+  font-size: 28px;
+  font-family: "Monaco", "Inconsolata", "Consolas", monospace;
+  font-style: italic;
+}
