@@ -1,0 +1,16 @@
+{
+  "name": "melissa-e-lucas",
+  "version": "1.0.0",
+  "main": "javascripts/script.js",
+  "dependencies": {
+    "jquery": "~1.8.3",
+    "jquery.scrollTo": "~1.4.6",
+    "jquery.serialScroll": "*",
+    "jquery-parallax": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
