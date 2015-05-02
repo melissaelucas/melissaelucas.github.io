@@ -459,21 +459,9 @@ h1.title {
 
 }
 
-.tira {
-    background-color: #445588;
-    text-align: center;
-}
-
-.mel {
-    color: #ffebcd;
-    font-size: 28px;
-    font-family: "Monaco", "Inconsolata", "Consolas", monospace;
-    font-style: italic;
-}
-
 .content {
     background-color: #ffffff;
-    height: 200px;
+    height: 0px;
 }
 
 .frase {
