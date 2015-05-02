@@ -430,9 +430,8 @@ body {
     font-size: 15px;
     font-family: Arial, Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    background: #D1D1D1 url(../images/tatuagens.jpg) center no-repeat;
+    background: #D1D1D1 url(../images/tatuagens.jpg) top no-repeat;
     background-size: 100%;
-    background-position-y: -400px;
 }
 
 .wrapper {
@@ -456,7 +455,7 @@ h1.title {
 
 .header h2 {
     color: beige;
-    font-family: fantasy;
+    font-family: "Andalus", fantasy;
 
 }
 
