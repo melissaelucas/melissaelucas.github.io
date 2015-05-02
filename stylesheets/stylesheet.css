@@ -430,8 +430,6 @@ body {
     font-size: 15px;
     font-family: Arial, Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    background: #D1D1D1 url(../images/tatuagens.jpg) top no-repeat;
-    background-size: 100%;
 }
 
 .wrapper {
@@ -439,9 +437,14 @@ body {
 }
 
 .header {
-    height: 1000px;
     text-align: center;
+    background: rgba(0, 0, 200, .2) url(../images/tatuagens.jpg) 0 0 no-repeat;
+    background-size: 100%;
+}
+
+.header .overlay {
     background-color: rgba(0, 0, 200, .2);
+    height: 1000px;
 }
 
 h1.title {
