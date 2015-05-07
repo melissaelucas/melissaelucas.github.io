@@ -477,7 +477,7 @@ h1.title {
 }
 
 .frase .overlay {
-    padding: 300px 0;
+    padding: 200px 0;
     background-color: rgba(158, 24, 226, .2);
 }
 
@@ -493,4 +493,28 @@ h1.title {
 .frase blockquote small {
     text-align: right;
     display: block;
+}
+
+@media (max-width: 930px) {
+    .frase {
+        background-size: 150%;
+    }
+}
+
+@media (max-width: 640px) {
+    .frase {
+        background-size: 200%;
+    }
+}
+
+@media (max-width: 540px) {
+    .frase {
+        background-size: 250%;
+    }
+}
+
+@media (max-width: 440px) {
+    .frase {
+        background-size: 300%;
+    }
 }
