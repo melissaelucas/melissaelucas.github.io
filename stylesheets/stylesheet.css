@@ -439,7 +439,7 @@ body {
 .header {
     text-align: center;
     background: rgba(0, 0, 200, .2) url(../images/tatuagens.jpg) 0 0 no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .header .overlay {
