@@ -512,7 +512,11 @@ h1.title {
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 575px) {
+    .content {
+        height: 280px;
+    }
+
     .frase {
         background-size: 250%;
     }
