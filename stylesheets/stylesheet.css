@@ -464,7 +464,12 @@ h1.title {
 
 .content {
     background-color: #ffffff;
-    height: 0px;
+    height: 200px;
+    text-align: center;
+}
+
+.content img {
+    margin: 0 20px;
 }
 
 .frase {
