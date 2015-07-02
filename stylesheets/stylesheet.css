@@ -524,10 +524,7 @@ h1.title {
 }
 
 @media (max-width: 575px) {
-    .content {
-        height: 280px;
-    }
-
+    #map-canvas { width: 100%; }
     .frase {
         background-size: 250%;
     }
