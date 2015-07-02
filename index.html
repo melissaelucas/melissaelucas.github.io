@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
 <!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
 <html>
@@ -29,6 +29,8 @@
         </div>
     </div>
     <div class="content">
+        <h3>Confirme sua presença:</h3>
+        <p><a class="phone" href="tel:+5511994364866">(11) 99436-4866</a>, falar com Fernanda</p>
         <h3>Listas de presentes:</h3>
         <a href="http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=185691"
                 ><img alt="Fast Shop" src="images/Fast-Shop.png"
@@ -36,6 +38,8 @@
         <a href="http://www.camicado.com.br/weddinglist/products/60280001"
                 ><img alt="Camicado" src="images/Camicado-logo.png"
                 ></a>
+        <h3>Endereços:</h3>
+        <div><div id="map-canvas"></div></div>
     </div>
     <div class="frase">
         <div class="overlay">
@@ -50,11 +54,62 @@
     </div>
 </div>
 
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxXg4QFgSUAtTOagTpDg6LH3KSRWCKt3c">
+</script>
+
 <script type="text/javascript">
     $(document).ready(function () {
         $('#nav').parallax("50%", -0.3);
         $('.frase').parallax("50%", 0.3, -1000);
-    })
+    });
+    function initialize() {
+        var mapOptions = {
+            center: { lat: -23.488016, lng: -46.620096},
+            zoom: 15
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+                mapOptions);
+
+        var igreja = new google.maps.Marker({
+            position: { lat: -23.492067, lng: -46.616025},
+            map: map,
+            icon: 'images/church.png',
+            animation: google.maps.Animation.BOUNCE,
+            title: 'Igreja N. Sra. Aparecida Jardim São Paulo'
+        });
+
+        var enderecoIgreja = new google.maps.InfoWindow({
+            content: '<div>\n    <p style="text-align: left">\n        <h4>Cerimônia: 18h30</h4>\n        <b>Paróquia Nossa Senhora Aparecida</b><br/>\n        Parque Domingos Luís, 273 - Santana<br/>\n        São Paulo - SP<br/>\n        02043-081<br/></p>\n</div>'
+        });
+        var enderecoBuffet = new google.maps.InfoWindow({
+            content: '<div>\n    <h4>Recepção: 20h</h4>\n    <p style="text-align: left">\n        <b>Espaço Valentim</b><br/>\n        R. Dr. Artur Guimarães, 205 - Santana<br/>\n        São Paulo - SP<br/>\n        02038-070</p>\n</div>'
+        });
+
+        var buffet = new google.maps.Marker({
+            position: { lat: -23.490515, lng: -46.625107},
+            map: map,
+            icon: 'images/dancinghall.png',
+            title: 'Espaço Valentim'
+        });
+
+        google.maps.event.addListener(igreja, 'click', function() {
+            igreja.setAnimation(null);
+            if (!buffet.clicked) {
+               buffet.setAnimation(google.maps.Animation.BOUNCE);
+            }
+            enderecoBuffet.close();
+            enderecoIgreja.open(map,igreja);
+        });
+
+        google.maps.event.addListener(buffet, 'click', function() {
+            buffet.clicked = true;
+            buffet.setAnimation(null);
+            enderecoIgreja.close();
+            enderecoBuffet.open(map,buffet);
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 </body>
 </html>

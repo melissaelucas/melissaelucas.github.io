@@ -464,13 +464,24 @@ h1.title {
 
 .content {
     background-color: #ffffff;
-    height: 200px;
     text-align: center;
+    padding: 15px 0;
 }
 
 .content img {
     margin: 0 20px;
 }
+
+.content p {
+    padding: 20px;
+}
+
+.phone {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5rem;
+}
+#map-canvas { margin: 0; padding: 0; height: 400px; width: 700px; display: inline-block;}
 
 .frase {
     background: #D1D1D1 url(../images/nos.jpg) center no-repeat;
